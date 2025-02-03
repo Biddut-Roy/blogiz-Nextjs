@@ -3,9 +3,7 @@ import { Blog } from "../../../Type";
 
 const BlogsPage = async () => {
   const response = await fetch("http://localhost:5000/blogs", {
-    next: {
-      revalidate: 30,
-    },
+    cache: "no-store",
   });
   const blogs = await response.json();
   return (
