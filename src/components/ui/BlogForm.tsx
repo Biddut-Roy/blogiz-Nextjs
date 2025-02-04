@@ -20,6 +20,10 @@ const CreateBlogForm = () => {
   } = useForm<FormValues>();
 
   const onSubmit = async (data: FormValues) => {
+    const response = await fetch("http://localhost:5000/blogs");
+    const blogs = await response.json();
+    data.id = JSON.stringify(blogs.length + 1);
+    data.total_likes = "100";
     console.log(data);
   };
 
