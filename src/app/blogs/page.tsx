@@ -22,11 +22,11 @@ const BlogsPage = () => {
         <i>Dive is tha facetiae world of Quantum computer</i>
       </p>
 
-      {/* <div className="grid grid-cols-3 gap-4 mt-5">
+      <div className="grid grid-cols-3 gap-4 mt-5">
         {blogs?.map((blog: Blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };
